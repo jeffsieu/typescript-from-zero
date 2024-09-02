@@ -1,0 +1,26 @@
+{
+  "name": "typescript-from-zero",
+  "version": "1.0.0",
+  "description": "An interactive Typescript tutorial.",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffsieu/typescript-from-zero.git"
+  },
+  "author": "Jeff Sieu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeffsieu/typescript-from-zero/issues"
+  },
+  "homepage": "https://github.com/jeffsieu/typescript-from-zero#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.9.0",
+    "eslint": "^9.9.0",
+    "globals": "^15.9.0",
+    "tsx": "^4.17.0",
+    "typescript-eslint": "^8.1.0"
+  }
+}

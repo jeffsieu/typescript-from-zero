@@ -1,0 +1,71 @@
+# Object types (and interfaces)
+
+Often in Javascript, you have something like this:
+
+```js
+// Javascript
+const person = {
+  name: 'Alice',
+  age: 25,
+  isStudent: true,
+};
+```
+
+This is how we can type it in Typescript:
+
+```ts
+// Typescript
+
+// Person is an object type
+type Person = {
+  name: string;
+  age: number;
+  isStudent: boolean;
+};
+
+const person: Person = {
+  name: 'Alice',
+  age: 25,
+  isStudent: true,
+};
+```
+
+The syntax for object types is similar to Javascript object literals, except that each key maps to a type instead of a value.
+
+Notice the similarity between the two:
+
+```ts
+// Notice that the object type and the object literal look similar
+type User = {
+  name: string;
+  age: number;
+}
+
+const user: User = {
+  name: 'Alice',
+  age: 25,
+}
+```
+
+## Interfaces
+
+TypeScript also allows you to define an `interface`. This would be familiar for those coming from object-oriented languages like Java or C#.
+
+Interfaces are essentially object types, but with a different syntax:
+
+```ts
+// Interface
+interface User {
+  name: string;
+  age: number;
+}
+
+type User = {
+  name: string;
+  age: number;
+}
+```
+
+The two are mostly equivalent and essentially interchangable. You may use the syntax that you prefer.
+
+> Note: There is a small difference between the two, which we will cover in an advanced topic. Only interfaces can be used for declaration merging and module augmentation. Until then, you may ignore this.
