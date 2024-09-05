@@ -40,8 +40,7 @@ There are some built-in type narrowing expressions in TypeScript that you can us
 - `instanceof` type guards - checks if a variable is an instance of a class
 - `in` type guards - checks if a property exists in an object
 - `Array.isArray` type guards - checks if a variable is an array
-
-
+- `===` - checks if a variable is a literal value
 
 These are illustrated in the following examples:
 

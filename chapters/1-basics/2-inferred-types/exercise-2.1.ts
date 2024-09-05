@@ -8,12 +8,12 @@ function add(a: number, b: number): number {
 }
 
 function canBuy(itemPrice: number, balance: number): boolean {
-  const hasEnoughMoney = balance >= itemPrice;
+  const hasEnoughMoney: boolean = balance >= itemPrice;
   return hasEnoughMoney;
 }
 
 function getFullName(firstName: string, lastName: string): string {
-  const fullName = `${firstName} ${lastName}`;
+  const fullName: string = `${firstName} ${lastName}`;
   return fullName;
 }
 
