@@ -36,7 +36,7 @@ We will be using [Visual Studio Code](https://code.visualstudio.com/) with the f
   1. [Overriding inferred types](./chapters/1-basics/3-overriding-inferred-types/README.md)
   1. [Type aliases](./chapters/1-basics/4-type-aliases/README.md)
   1. [Object types and interfaces](./chapters/1-basics/5-object-types-and-interfaces/README.md)
-  1. [Optional types and properties](./chapters/1-basics/6-optional-types-and-properties/README.md)
+  1. [Optional properties and types](./chapters/1-basics/6-optional-properties-and-types/README.md)
   1. [Union and literal types](./chapters/1-basics/7-union-and-literal-types/README.md)
   1. [Type assertions](./chapters/1-basics/8-type-assertions/README.md)
   1. [Type guards](./chapters/1-basics/9-type-guards/README.md)
@@ -47,11 +47,12 @@ We will be using [Visual Studio Code](https://code.visualstudio.com/) with the f
 - Intermediate
   1. [Unknown vs any](./chapters/2-intermediate-concepts/1-unknown-any/README.md)
   1. [Intersection types](./chapters/2-intermediate-concepts/2-intersection-types/README.md)
-  1. [Exclude types, Omit, Exclude](./chapters/2-intermediate-concepts/3-exclude-types-omit-exclude/README.md)
-  1. [Variable types and typeof](./chapters/2-intermediate-concepts/4-variable-types-typeof/README.md)
-  1. [Variable keys and keyof](./chapters/2-intermediate-concepts/5-variable-keys-keyof/README.md)
-  1. [As vs type annotations vs satisfies](./chapters/2-intermediate-concepts/6-as-vs-type-annotations-vs-satisfies/README.md)
-  1. [Null, undefined, void, never](./chapters/2-intermediate-concepts/7-null-undefined-void-never/README.md)
+  1. [Exclude types using Omit and Exclude](./chapters/2-intermediate-concepts/3-exclude-types-omit-exclude/README.md)
+  1. [Null, undefined, void and never](./chapters/2-intermediate-concepts/4-null-undefined-void-never/README.md)
+  1. [Variable types and typeof](./chapters/2-intermediate-concepts/5-variable-types-typeof/README.md)
+  1. [Variable keys and keyof](./chapters/2-intermediate-concepts/6-variable-keys-keyof/README.md)
+  1. [Satisfies keyword](./chapters/2-intermediate-concepts/7-satisfies/README.md)
+  1. [As vs type annotations vs satisfies](./chapters/2-intermediate-concepts/8-as-vs-type-annotations-vs-satisfies/README.md)
   1. [Discriminated unions](./chapters/2-intermediate-concepts/9-discriminated-unions/README.md)
 
 - Advanced concepts
