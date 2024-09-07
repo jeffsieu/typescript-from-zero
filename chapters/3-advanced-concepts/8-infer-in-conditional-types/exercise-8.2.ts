@@ -1,41 +1,39 @@
 // EXERCISE 8.2: Infer in conditional types
 // Implement advanced type utilities using infer in conditional types
 
-// TODO: Implement a 'DeepPromiseValueType' type that extracts the value type from deeply nested Promises
-// Example: DeepPromiseValueType<Promise<Promise<string>>> should be string
+// 1. Implement a 'DeepAwaited' type that extracts the value type from deeply nested Promises
+// Example: DeepAwaited<Promise<Promise<string>>> should be string
+// Clue: Use infer with recursion
 
-type DeepPromiseValueType<T> = // Your implementation here
+type DeepAwaited<T> = ; // Your implementation here
+type DeepAwaitedTest = DeepAwaited<Promise<Promise<Promise<number>>>>;
+//   ^?
+const deepAwaitedTest: DeepAwaitedTest = 42;
 
-// TODO: Implement a 'ExtractFunctions type that extracts all properties of T that are functions
-// Example: ExtractFunctions<{ a: () => void; b: string; c: (x: number) => number }>
-// should be { a: () => void; c: (x: number) => number }
+// 2. Implement an ReturnTypes type that returns an object type
+// with only keys that are functions that return a string. The value
+// would be the return type of the function matching that key.
+// Example: ReturnTypes<{
+//           getValue: () => string; 
+//           value: string;
+//           getStatus: () => 'active' | 'inactive';
+//          }>
+//          should be {
+//            getValue: string;
+//            getStatus: 'active' | 'inactive';
+//          }
 
-type ExtractFunctions<T> = // Your implementation here
-
-// TODO: Implement a 'UnionToTuple' type that converts a union to a tuple type
-// Hint: You'll need to use recursive conditional types and infer
-// Example: UnionToTuple<'a' | 'b' | 'c'> should be ['a', 'b', 'c'] (or any permutation)
-
-
-// Test your implementations
-type DeepPromiseValueTypeTest = DeepPromiseValueType<Promise<Promise<Promise<number>>>>;
-
-type ExtractFunctionsTest = ExtractFunctions<{
-  a: () => void;
-  b: string;
-  c: (x: number) => number;
-  d: Date;
+type ReturnTypes<T> = ; // Your implementation here
+type ReturnTypesTest = ReturnTypes<{
+//   ^?
+  onChange: (value: string) => void;
+  getValue: () => string;
+  getStatus: () => 'active' | 'inactive';
+  value: string;
+  date: Date;
 }>;
-
-type UnionToTupleTest = UnionToTuple<'a' | 'b' | 'c'>;
-
-// Verify your implementations
-
-const deepPromiseValueTypeTest: DeepPromiseValueTypeTest = 42;
-
-const extractFunctionsTest: ExtractFunctionsTest = {
-  a: () => {},
-  c: (x) => x * 2
+const returnTypesTest: ReturnTypesTest = {
+  getValue: "",
 };
 
 // ignore the line below
