@@ -45,6 +45,7 @@ Module augmentation allows us to add type definitions for new functions, classes
 This is common with third-party libraries where we might have a custom configurations from which type definitions should be generated.
 
 Examples:
+
 - [Adding custom theme variables to Material UI library](https://mui.com/material-ui/customization/theming/#typescript)
 - [Adding route config to TanStack Router for type-safe routing](https://tanstack.com/router/latest/docs/framework/react/quick-start#srcmaintsx)
 
