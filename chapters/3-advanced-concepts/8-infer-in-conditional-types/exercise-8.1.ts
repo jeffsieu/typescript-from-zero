@@ -1,4 +1,4 @@
-// EXERCISE 1.1: Implement utility types using infer in conditional types
+// EXERCISE 8.1: Implement utility types using infer in conditional types
 
 // TODO: Implement a 'Parameters' type that extracts the parameter types of a function type as a tuple
 // Example: Parameters<(a: number, b: string) => void> should be [number, string]

@@ -1,4 +1,4 @@
-// EXERCISE 5.2: Create a type-safe event system using mapped types
+// EXERCISE 7.2: Create a type-safe event system using mapped types
 
 // Define a set of events
 interface Events {

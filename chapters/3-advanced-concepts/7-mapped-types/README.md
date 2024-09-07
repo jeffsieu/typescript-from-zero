@@ -1,10 +1,8 @@
-# Mapped Types
+# Mapped types
 
-Mapped types are a powerful feature in TypeScript that allow you to create new types based on existing ones. They provide a way to transform the properties of an existing type in a systematic way, creating a new type with modified property types, names, or modifiers.
+Mapped types allow you to create new types based on existing ones. They provide a way to transform the properties of an existing type in a systematic way, creating a new type with modified property types, names, or modifiers.
 
-## Basic Syntax
-
-The basic syntax for a mapped type looks like this:
+A mapped type looks like this:
 
 ```ts
 type MappedType<T> = {
@@ -14,7 +12,7 @@ type MappedType<T> = {
 
 Here, `P in keyof T` iterates over each property `P` in type `T`.
 
-## Transforming Property Types
+## Transforming property types
 
 You can transform property types:
 
@@ -28,9 +26,9 @@ type NullableUser = Nullable<User>;
 // Equivalent to: { name: string | null; age: number | null; }
 ```
 
-## Modifying Property Modifiers
+## Modifying property modifiers
 
-You can add or remove `readonly` and optional modifiers:
+You can add or remove `readonly` and optional modifiers. Removing modifiers can be done using `-`:
 
 ```ts
 type Mutable<T> = {
@@ -42,7 +40,7 @@ type Required<T> = {
 };
 ```
 
-## Key Remapping
+## Key remapping
 
 You can remap property keys using the `as` keyword. We can use `Capitalize<T>`, `Lowercase<T>`, and `Uppercase<T>` helper generics to manipulate the keys.
 
@@ -79,7 +77,7 @@ type StateChangeHandler = ChangeHandler<State>;
 
 Mapped types are extremely useful for creating reusable type transformations, reducing code duplication, and enabling more flexible and powerful type manipulations in TypeScript.
 
-## Filtering out keys
+## Filtering out object keys
 
 You can filter out keys by producing never via a conditional type:
 

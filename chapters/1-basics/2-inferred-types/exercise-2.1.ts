@@ -1,4 +1,5 @@
-// Task: Identify and remove unnecessary type annotations
+// Exercise 2.1: Inferred types
+// Identify and remove unnecessary type annotations
 
 // Note: Typescript should not be complaining (no red squiggles) after
 // your changes

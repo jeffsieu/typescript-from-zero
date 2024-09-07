@@ -3,29 +3,13 @@
 Sometimes, you have to reuse a type elsewhere in your code. Instead of repeating the type definition, you can use a type alias.
 
 ```ts
-type Direction = 'left' | 'right' | 'up' | 'down';
-
-function move(direction: Direction) {
-  console.log(`Moving ${direction}`);
-}
-
-let currentDirection: Direction = 'left';
-
-// Do other stuff
-```
-
-In the above example, `Direction` is a type alias for the union type `'left' | 'right' | 'up' | 'down'`.
-
-You may define aliases for *any* type, not just literal unions:
-
-```ts
 // You may alias a primitive type
 type Name = string
 // And even alias an alias
 type FullName = Name;
 // Aliases are useful to define complex types
 type SuperLongType = string | number | boolean | null | undefined;
-
+// ^ Union types are covered in a later chapter
 
 const fullName: FullName = 'Alice Smith';
 

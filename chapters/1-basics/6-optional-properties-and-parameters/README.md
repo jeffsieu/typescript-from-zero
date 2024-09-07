@@ -1,8 +1,8 @@
-# Optional Types and Parameters
+# Optional properties and parameters
 
 In TypeScript, optional types and parameters allow you to define values that may or may not be present. This is useful when you want to create flexible interfaces or functions that can work with varying amounts of information.
 
-## Optional Properties
+## Optional properties
 
 You can mark object properties as optional by adding a `?` after the property name:
 
@@ -15,7 +15,7 @@ interface Person {
 
 In this example, `age` is optional. You can create a `Person` object with or without specifying the `age`.
 
-## Optional Parameters
+## Optional parameters
 
 Similarly, function parameters can be made optional:
 
@@ -30,9 +30,9 @@ function greet(name: string, greeting?: string) {
 
 Here, `greeting` is an optional parameter. You can call `greet` with just a name, or with both a name and a greeting.
 
-## Optional Chaining
+## Optional chaining
 
-TypeScript 3.7 introduced optional chaining, which allows you to safely access nested properties that might be undefined:
+Optional chaining allows you to safely access nested properties that might be undefined:
 
 ````typescript
 type User = {
@@ -50,7 +50,7 @@ function getCity(user: User): string | undefined {
 
 The `?.` operator checks if `address` exists before trying to access `city`.
 
-## Nullish Coalescing
+## Nullish coalescing
 
 The nullish coalescing operator `??` provides a way to fallback to a default value when dealing with `null` or `undefined`:
 

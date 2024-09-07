@@ -1,4 +1,4 @@
-// EXERCISE 1.2: Refactor the following JavaScript code to use TypeScript with optional types and parameters.
+// EXERCISE 6.1: Refactor the following JavaScript code to use TypeScript with optional types and parameters.
 // Add type annotations where necessary and modify the functions to handle optional parameters appropriately.
 
 // 1. Refactor this function to use an optional parameter for 'title'
@@ -76,3 +76,6 @@ const product1 = {
 const product2 = { name: "Mouse", price: 19.99 };
 console.log(displayProductInfo(product1));
 console.log(displayProductInfo(product2));
+
+// ignore the line below
+export {}

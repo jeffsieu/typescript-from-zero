@@ -1,8 +1,8 @@
-# Discriminated Unions
+# Discriminated unions
 
 Discriminated unions, also known as tagged unions or algebraic data types, are a powerful feature in TypeScript that allows you to create types which are a union of other types, but can be easily differentiated based on a common, literal property.
 
-## Basic Structure
+## Structure
 
 A discriminated union typically consists of:
 
@@ -25,7 +25,7 @@ type Shape = Square | Circle;
 
 Here, `kind` is the discriminant property.
 
-## Type Narrowing
+## Type narrowing
 
 The discriminant allows TypeScript to narrow down the type within conditional blocks:
 
@@ -40,7 +40,7 @@ function area(shape: Shape): number {
 }
 ```
 
-## Exhaustiveness Checking
+## Exhaustiveness checking
 
 TypeScript can perform exhaustiveness checking with discriminated unions:
 
@@ -63,7 +63,7 @@ function area(shape: Shape): number {
 
 If we add a new shape without updating this function, TypeScript will give us an error.
 
-## Use Cases
+## Use cases
 
 Discriminated unions are particularly useful for:
 
@@ -72,12 +72,3 @@ Discriminated unions are particularly useful for:
 3. Representing different variants of a data structure
 
 They provide a way to model complex data structures whilst maintaining type safety and enabling powerful type inference.
-
-
-
-```
-
-## Exercise 1.2
-```ts
-
-```

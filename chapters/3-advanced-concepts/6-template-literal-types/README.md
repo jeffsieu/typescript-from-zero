@@ -1,4 +1,4 @@
-# Template Literal Types
+# Template literal types
 
 Template literal types in TypeScript allow you to create new string types by combining literal types with embedded expressions, similar to how string templates work in JavaScript. This is a powerful way to build dynamic types that depend on other types, making type definitions more flexible and descriptive.
 
@@ -11,7 +11,7 @@ const validGreeting: Greeting = 'Hello, World'; // Valid
 
 This means `Greeting` can be any string that starts with `"Hello, "` followed by any other string.
 
-## Use case 1: Defining Dynamic String Types
+## Use case 1: Defining dynamic string types
 
 Template literal types allow you to create specific, dynamic string patterns, such as constructing valid routes for a URL system.
 
@@ -36,7 +36,7 @@ const validRoute: Route = '/users/john/posts/123';
 const invalidRoute: Route = '/users/john/posts/abc';
 ```
 
-## Extending Existing String Types
+## Extending existing string types
 
 Template literal types can also help you extend existing string types. For instance, you might want to add prefixes or suffixes to existing types.
 
@@ -48,7 +48,7 @@ type Example = PrefixHello<"World">; // "Hello, World"
 
 This helper type appends `"Hello, "` to any string type passed to it, which can be useful for generating descriptive labels, keys, or identifiers dynamically.
 
-## Template Literal Types with Unions
+## Template literal types with unions
 
 You can combine template literal types with union types to create flexible string structures.
 

@@ -1,10 +1,6 @@
-# Infer in Conditional Types
+# `infer` in conditional types
 
-The `infer` keyword in TypeScript is a powerful feature used within conditional types to infer (extract) type information. It allows you to capture and use types that are matched within a conditional type, enabling complex type transformations and pattern matching on types.
-
-## Basic Syntax
-
-The basic syntax for using `infer` looks like this:
+The `infer` keyword is used within conditional types to infer (extract) type information. It allows you to capture and use types that are matched within a conditional type.
 
 ```ts
 type InferredType<T> = T extends infer U ? U : never;
@@ -12,25 +8,25 @@ type InferredType<T> = T extends infer U ? U : never;
 
 Here, `U` is a type variable that is inferred from `T`.
 
-## Practical Usage
+## Usages
 
 `infer` is particularly useful when working with complex types, such as function types, promise types, or nested object types.
 
 A lot of useful built-in helper types in TypeScript are actually built using `infer` under the hood.
 
-### Inferring Return Types
+### Inferring return types
 
 You can use `infer` to extract the return type of a function:
 
 ```ts
-type MyReturnType<T> = T extends (...args: any[]) => infer R ? R : any;
+type MyReturnType<T> = T extends (...args: any[]) => infer R ? R : never;
 
 type Func = (x: number) => string;
 type FuncReturnType = MyReturnType<Func>; 
 //   ^ FuncReturnType: string
 ```
 
-### Inferring Promise Types
+### Inferring `Promise` return types
 
 You can extract the type wrapped by a Promise:
 
@@ -40,7 +36,7 @@ type UnwrapPromise<T> = T extends Promise<infer U> ? U : T;
 type PromiseType = UnwrapPromise<Promise<number>>; // number
 ```
 
-### Inferring Array Element Types
+### Inferring array element Types
 
 You can extract the element type of an array:
 
@@ -50,7 +46,7 @@ type ArrayElement<T> = T extends (infer U)[] ? U : never;
 type NumberArray = ArrayElement<number[]>; // number
 ```
 
-## Multiple Inferences
+## Multiple inferences
 
 You can use multiple `infer` keywords in a single conditional type:
 

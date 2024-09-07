@@ -1,4 +1,4 @@
-// EXERCISE 1.1: Implement utility types using mapped types
+// EXERCISE 7.1: Implement utility types using mapped types
 
 // TODO: Implement a 'ReadonlyDeep' type that makes all properties and nested properties of T readonly
 

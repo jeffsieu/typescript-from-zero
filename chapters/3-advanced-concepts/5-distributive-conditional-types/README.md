@@ -1,4 +1,4 @@
-# Distributive Conditional Types
+# Distributive conditional types
 
 When conditional types act on a generic type, they become distributive when given a union type.
 
@@ -24,7 +24,7 @@ type StringOrNumberArray = MyArray<StringOrNumber>;
 // ^ (string | number)[]
 ```
 
-## Preventing Distribution
+## Preventing union distribution
 
 To prevent distribution, you can wrap the checked type in square brackets:
 
@@ -67,7 +67,7 @@ type AOrNever = 'a' | never;
 
 ```
 
-## Use Cases
+## Use cases
 
 Distributive conditional types are particularly useful for:
 

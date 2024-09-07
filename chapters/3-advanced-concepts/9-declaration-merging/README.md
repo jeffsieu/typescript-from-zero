@@ -1,8 +1,8 @@
-# Declaration Merging
+# Declaration merging
 
 Declaration merging allows you to combine multiple declarations with the same name into a single definition. This is particularly useful for extending existing types, interfaces, and modules without modifying their original definitions.
 
-## Merging Interfaces
+## Merging interfaces
 
 Interfaces with the same name are automatically merged:
 
@@ -24,7 +24,7 @@ interface Box {
 // }
 ```
 
-## Module Augmentation
+## Module augmentation
 
 You can extend existing modules by using declaration merging:
 
@@ -48,7 +48,7 @@ Examples:
 - [Adding custom theme variables to Material UI library](https://mui.com/material-ui/customization/theming/#typescript)
 - [Adding route config to TanStack Router for type-safe routing](https://tanstack.com/router/latest/docs/framework/react/quick-start#srcmaintsx)
 
-## Global Augmentation
+## Global augmentation
 
 You can add declarations to the global scope from within a module:
 

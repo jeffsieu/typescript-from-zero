@@ -1,5 +1,5 @@
-// EXERCISE 1.1: Add/correct type annotations to all the variable
-// and functions below.
+// Exercise 1.1: Type annotations
+// Add/correct type annotations to all the variable and functions below.
 
 const age = 25;
 const message = "Hello, world!";

@@ -1,10 +1,8 @@
-# Index Types
+# Index types
 
 Index types in TypeScript allow you to query the type of properties within an object or record. This is useful when working with dynamically created keys or when you want to create types that depend on other types.
 
-Imagine you have an object where you want to ensure that the keys match a specific set of values. In JavaScript, there is no inherent type checking for such structures. However, TypeScript provides the ability to enforce and infer types for object keys and values using index types.
-
-## Using Index Types
+## Basic usage
 
 Consider this basic object in JavaScript:
 
@@ -30,23 +28,6 @@ But what if you want to extract the type of a property dynamically? Index types 
 type UserKeys = keyof User; // 'name' | 'age'
 type UserName = User['name']; // string
 ```
-
-## Index Signatures
-
-If you're dealing with objects with unknown keys but want to enforce the type of values, you can use index signatures. For instance, you could create a map where all values are strings, but the keys are unknown.
-
-```ts
-type StringMap = {
-  [key: string]: string;
-};
-
-const myMap: StringMap = {
-  firstName: 'John',
-  lastName: 'Doe'
-};
-```
-
-The `[key: string]` indicates that any string key is valid, but the values must be of type `string`.
 
 ## Using Union Types with Index Types
 

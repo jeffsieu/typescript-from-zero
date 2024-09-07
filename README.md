@@ -30,4 +30,12 @@ npm install # Install ESLint and Typescript for type-checking in hands-on exerci
 
 ## Table of Contents
 
-- TODO
+- Basics
+  1. [Introduction to Typescript](./chapters/1-basics/0-introduction-to-typescript/README.md)
+  1. [Type annotations](./chapters/1-basics/1-type-annotations/README.md)
+  1. [Inferred types](./chapters/1-basics/2-inferred-types/README.md)
+  1. [Overriding inferred types](./chapters/1-basics/3-overriding-inferred-types/README.md)
+  1. [Type aliases](./chapters/1-basics/4-type-aliases/README.md)
+  1. [Object types and interfaces](./chapters/1-basics/5-object-types-and-interfaces/README.md)
+  1. [Optional types and properties](./chapters/1-basics/6-optional-types-and-properties/README.md)
+

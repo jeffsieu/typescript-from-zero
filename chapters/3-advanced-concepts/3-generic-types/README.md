@@ -1,10 +1,10 @@
-# Generic Types
+# Generic types
 
 Generics in TypeScript allow you to create reusable, flexible, and type-safe components. Instead of creating multiple versions of a function or class to handle different types, you can use generics to create a single version that works with various types, while still ensuring type safety.
 
 Generics are particularly useful in situations where you need to write code that works with multiple types but you want to ensure that the operations you perform are consistent with the types involved.
 
-## Practical Example: Fetching API Data
+## Example: Fetching API Data
 
 Imagine you're building an application that fetches data from an API. Each API endpoint may return different types of data. Instead of writing separate functions to handle the different data types, you can write a single generic function that works with any type of data.
 
@@ -45,7 +45,7 @@ async function getUserData() {
 }
 ```
 
-## Generics in Arrays and Collections
+## Generics in arrays and collections
 
 Another common use case for generics is working with collections of items, such as arrays. For instance, if you wanted to create a function that filters an array based on a certain condition, you can make that function generic to work with arrays of any type.
 
@@ -65,7 +65,7 @@ const words = ['apple', 'banana', 'cherry'];
 const filteredWords = filterArray(words, word => word.length > 5);
 ```
 
-## Constraints in Generics
+## Constraints in generics
 
 While generics offer flexibility, sometimes you need to restrict the types that can be used. This is done by adding constraints.
 
