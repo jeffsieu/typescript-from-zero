@@ -1,4 +1,4 @@
-// EXERCISE 3.4:
+// EXERCISE 4.1: Conditional types
 
 // 1. Implement a type `IsString<T>` that returns `true` if `T` is a string
 // type, and `false` otherwise.

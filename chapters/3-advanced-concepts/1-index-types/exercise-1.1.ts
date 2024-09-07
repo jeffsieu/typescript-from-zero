@@ -1,4 +1,5 @@
-// EXERCISE 1.1: Refactor the following code to use index types and ensure proper typing of keys and values.
+// EXERCISE 1.1: Index types
+// Refactor the following code to use index types and ensure proper typing of keys and values.
 
 const data = {
   userId: 123,

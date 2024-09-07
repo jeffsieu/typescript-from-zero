@@ -1,89 +1,86 @@
-# Union and literal types
+# Union and Literal Types
 
-Sometimes, it is not enough to use the built-in primitive types like `string` and `number` by themselves.
+TypeScript provides powerful type system features that allow for more precise type definitions. Two such features are union types and literal types.
 
-Consider the following code which converts either a string or number to a number:
+## Union Types
 
-```js
-// Javascript
-function toNumber(value) {
-  if (typeof value === 'number') {
-    return value;
-  }
+Union types allow you to specify that a value can be one of several types. This is particularly useful when a variable or parameter can accept multiple types of values.
 
-  return parseInt(value);
-}
-```
+To define a union type, use the `|` (pipe) symbol between the types:
 
-This will look like the following in Typescript:
+`type StringOrNumber = string | number;`
 
-```ts
-function toNumber(value: string | number): number {
-  if (typeof value === 'number') {
-    return value;
-  }
+You can use union types for variables, function parameters, and return types:
 
-  return parseInt(value);
-}
-```
+`function printId(id: number | string) {
+  console.log("Your ID is: " + id);
+}`
 
-## Union types
+This function can accept either a number or a string as an argument:
 
-You can "combine" types in TypeScript by separating two or more types with a `|`. This is similar to the "OR" operator in Javascript, which is `||`.
+`printId(101);  // Valid
+printId("202");  // Also valid`
 
-In the above example, `value` can be either a `string` or a `number`.
+## Literal Types
 
-Here are more examples of union types:
+Literal types allow you to specify exact values that a type can have. This is useful when you want to limit a variable to a specific set of values.
+
+You can use literal types with primitives like strings, numbers, and booleans:
 
 ```ts
-const date: string | Date = new Date();
-const result: number | string = 25;
+type Direction = "North" | "South" | "East" | "West";
+type DiceRoll = 1 | 2 | 3 | 4 | 5 | 6;
+type BinaryOptions = 0 | 1 | true | false;
 ```
 
-## Literal types
-
-Typescript also allows you to specify the exact value that a variable can have. This is called a literal type.
-
-Here is an example:
+These types can only hold the specified values:
 
 ```ts
-const direction: 'left' | 'right' | 'up' | 'down' = 'left';
-```
-
-In the above example, `direction` can only be one of the four strings: `'left'`, `'right'`, `'up'`, or `'down'`.
-
-More hypothetical examples:
-  
-```ts
-const pi: 3.14 = 3.14;
-const isTrue: true = true;
-const isFalse: false = false;
-const name: 'Alice' = 'Alice';
+// Valid
+let direction: Direction = "North"; 
+// Error: Type '"Northeast"' is not assignable to type 'Direction'.`
+direction = "Northeast"; 
 ```
 
 ## Literal unions
 
-The union  of literal types allows you to create an "[enum](https://en.wikipedia.org/wiki/Enumerated_type)"-like data type in Typescript.
-
-Here is an example:
+You can combine union and literal types to create powerful type definitions:
 
 ```ts
-function move(direction: 'left' | 'right' | 'up' | 'down') {
-  // move the player
-}
+type Status = "pending" | "processing" | "completed" | number;
+```
 
-move("left"); // works
-move(100); // throws an error
-move("home") // throws an error even though "home" is a string
+This type allows for specific string values or any number:
+
+```ts
+let status: Status = "pending";  // Valid
+status = 404;  // Also valid
+status = "cancelled";  // Error: Type '"cancelled"' is not assignable to type 'Status'.`
 ```
 
 VSCode is smart enough that it provides autocompletion for the possible values of `direction` as well.
 
-## Smart inference
+## Type Narrowing with Union Types
 
-TypeScript is smart enough to infer the possible types of a variable based on the context.
+When working with union types, TypeScript uses control flow analysis to narrow down the type within conditional blocks:
 
-For example:
+```ts
+function padLeft(value: string, padding: string | number) {
+  if (typeof padding === "number") {
+    return " ".repeat(padding) + value;
+  }
+  return padding + value;
+}
+
+padLeft("Hello", 5);  // Returns "     Hello"
+padLeft("Hello", "World");  // Returns "WorldHello"
+```
+
+In this example, TypeScript knows that `padding` is a number in the first block and a string in the second.
+
+### Another example
+
+We have a function that moves an object in a specific direction:
 
 ```ts
 function move(direction: 'left' | 'right' | 'up' | 'down') {
@@ -114,7 +111,8 @@ function getAction(direction: 'left' | 'right' | 'up' | 'down'): Action {
       return action
       break;
     // Note: No default case needed
-    // Return type is Action rather than Action | undefined
+    // Despite this, return type is Action rather than Action | undefined
+    // because TypeScript knows that all cases are covered
   }
 }
 ```

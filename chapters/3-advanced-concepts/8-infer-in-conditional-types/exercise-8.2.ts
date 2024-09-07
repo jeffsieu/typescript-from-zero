@@ -1,4 +1,5 @@
-// EXERCISE 8.2: Implement advanced type utilities using infer in conditional types
+// EXERCISE 8.2: Infer in conditional types
+// Implement advanced type utilities using infer in conditional types
 
 // TODO: Implement a 'DeepPromiseValueType' type that extracts the value type from deeply nested Promises
 // Example: DeepPromiseValueType<Promise<Promise<string>>> should be string

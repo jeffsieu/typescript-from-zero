@@ -1,4 +1,5 @@
-// EXERCISE 3.1: Refactor the following code to use generics
+// EXERCISE 3.1: Generic types
+// Refactor the following code to use generics
 // This function fetches data from different API endpoints. Currently, it uses `any`, which removes type safety.
 
 async function fetchProductData() {

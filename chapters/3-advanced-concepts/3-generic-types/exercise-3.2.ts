@@ -1,4 +1,5 @@
-// EXERCISE 3.2: Create a generic function to merge two objects
+// EXERCISE 3.2: Generic functions
+// Create a generic function to merge two objects
 // In this exercise, you will write a function that merges two objects.
 // The function should be flexible enough to merge any kind of objects and preserve the type of each property.
 

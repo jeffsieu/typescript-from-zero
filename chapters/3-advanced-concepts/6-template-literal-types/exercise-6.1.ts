@@ -1,4 +1,5 @@
-// EXERCISE 5.1: Define a template literal type for API routes.
+// EXERCISE 6.1: Template literal types
+// Define a template literal type for API routes.
 
 // Create a template literal type for an API route that follows this pattern:
 // '/api/<entity>/<id>'

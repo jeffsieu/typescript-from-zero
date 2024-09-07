@@ -1,4 +1,4 @@
-// EXERCISE 6.1: Refactor the following JavaScript code to use TypeScript with optional types and parameters.
+// EXERCISE 6.1: Optional properties and parameters
 // Add type annotations where necessary and modify the functions to handle optional parameters appropriately.
 
 // 1. Refactor this function to use an optional parameter for 'title'
@@ -9,18 +9,53 @@ function greet(name, title) {
   return `Hello, ${name}!`;
 }
 
-// 2. Create a type for the configuration object with optional properties
-// Then, refactor the function to use this type
+// TESTS
+// Should work:
+console.log(greet("Alice", "Ms."));
+console.log(greet("Bob"));
+
+// Should not work:
+console.log(greet("Charlie", "Mr.", "Brown"));
+
+
+// 2. Define a type for User
+//    - name
+//    - age (optional)
+//    - email (optional)
+//    - isAdmin
+//    - address (optional)
+type User = ; // Your implementation here
+
+// 3. Define type for Address
+//    - street
+//    - city
+//    - country
+type Address = ; // Your implementation here
+
+// 4. Create a type for the configuration object with optional properties
+type UserConfig = ; // Your implementation here
+
+// 5. Refactor the function to take in UserConfig and return User.
 function createUser(config) {
   return {
     name: config.name,
     age: config.age ?? "Unknown",
     email: config.email ?? "No email provided",
-    isAdmin: config.isAdmin ?? false,
+    isAdmin: config.isAdmin,
   };
 }
 
-// 3. Refactor this function to use optional chaining and nullish coalescing
+// TESTS
+// Should work:
+const user1 = createUser({
+  name: "Charlie",
+  age: 30,
+  email: "charlie@example.com",
+});
+const user2 = createUser({ name: "David", isAdmin: true });
+
+// 6. Add appriopriate type annotations
+// Then, refactor this function to use optional chaining and nullish coalescing
 function getFullAddress(user) {
   const street =
     user.address && user.address.street
@@ -36,7 +71,13 @@ function getFullAddress(user) {
   return `${street}, ${city}, ${country}`;
 }
 
-// 4. Create a type for the product with optional properties
+// 7. Create a type for the product with optional properties
+//   - name
+//   - price
+//   - description (optional)
+//   - category (optional)
+type Product = ; // Your implementation here
+
 // Then, refactor the function to use this type and handle optional properties
 function displayProductInfo(product) {
   let info = `${product.name} - $${product.price}`;
@@ -52,22 +93,8 @@ function displayProductInfo(product) {
   return info;
 }
 
-// Test your refactored functions here
-console.log(greet("Alice", "Ms."));
-console.log(greet("Bob"));
-
-const user1 = createUser({
-  name: "Charlie",
-  age: 30,
-  email: "charlie@example.com",
-});
-const user2 = createUser({ name: "David", isAdmin: true });
-
-console.log(
-  getFullAddress({ address: { street: "123 Main St", city: "Anytown" } })
-);
-console.log(getFullAddress({ address: {} }));
-
+// TESTS
+// Should work:
 const product1 = {
   name: "Laptop",
   price: 999.99,

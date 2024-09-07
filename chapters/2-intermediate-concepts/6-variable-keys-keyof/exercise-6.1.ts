@@ -1,4 +1,4 @@
-// Exercise: Variable keys using "keyof"
+// Exercise 6.1: Variable keys using "keyof"
 
 type User = {
   id: number;
@@ -8,7 +8,7 @@ type User = {
 }
 
 // 1. Use keyof to create a type representing all keys of User
-type UserKey = ;// Your implementation here
+type UserKey = ; // Your implementation here
 
 // 2. Annotate getUserProperty with appropriate types
 function getUserProperty(user, key) {
@@ -25,7 +25,7 @@ const apiEndpoints = {
 };
 
 // 3. Use keyof to create a type representing all keys of apiEndpoints
-type ApiEndpoint = keyof typeof apiEndpoints;
+type ApiEndpoint = ; // Your implementation here
 
 // 4. Create a function that takes an ApiEndpoint and returns the corresponding URL
 function getApiUrl(endpoint) {

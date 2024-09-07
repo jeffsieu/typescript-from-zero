@@ -7,6 +7,7 @@ const userAge = parseInt(userInput) as number;
 // 2. Refactor the following code to use "satisfies" with as const instead of type annotation
 type Status = "pending" | "active" | "inactive";
 const statusMap: Record<Status, string> = {
+//    ^?
   pending: "Waiting for approval",
   active: "User is active",
   inactive: "User has been deactivated",

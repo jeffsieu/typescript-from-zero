@@ -1,4 +1,5 @@
-// EXERCISE 9.2: Model a task management system using discriminated unions,
+// EXERCISE 9.2: Discriminated unions
+// Model a task management system using discriminated unions,
 // then implement functions to process tasks.
 
 // TODO: Create a discriminated union type 'Task' with the following subtypes:
@@ -7,7 +8,7 @@
 // 3. 'Improvement': id (number), title (string), estimatedTime (number)
 // Use a 'type' property as the discriminant
 
-type Task = // Your implementation here
+type Task = ;// Your implementation here
 
 // TODO: Implement a function 'summarizeTask' that takes a Task and returns
 // a string summary:

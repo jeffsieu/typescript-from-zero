@@ -1,4 +1,5 @@
-// EXERCISE 9.1: Implement a discriminated union for different types of
+// EXERCISE 9.1: Discriminated unions
+// Implement a discriminated union for different types of
 // users in a system, then create functions to process these users.
 
 // TODO: Create a discriminated union type 'User' that represents three types of users:
@@ -7,7 +8,7 @@
 // 3. 'Viewer' with properties: id (number), username (string)
 // Use a 'role' property as the discriminant
 
-type User = // Your implementation here
+type User = ; // Your implementation here
 
 // TODO: Implement a function 'getUserPermissions' that takes a User and returns
 // a string describing their permissions:

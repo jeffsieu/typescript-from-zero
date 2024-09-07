@@ -1,4 +1,5 @@
-// EXERCISE 2.1: Create overloads for a function that
+// EXERCISE 2.1: Function overloading
+// Create overloads for a function that
 // concatenates one string with one number.
 // Ensure that the correct type of arguments are passed and the expected return type is enforced.
 

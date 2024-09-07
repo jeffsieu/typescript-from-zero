@@ -1,4 +1,5 @@
-// EXERCISE 7.1: Implement utility types using distributive conditional types
+// EXERCISE 5.1: Distributive conditional types
+// Implement utility types using distributive conditional types
 
 // TODO: Implement an 'Flatten' type that flattens array types one level deep
 // Hint: Use distributive conditional types

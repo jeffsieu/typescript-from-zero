@@ -12,7 +12,7 @@ type User = {
 type PublicUser = // Your implementation here
 
 // 2. Create a function that takes a User and returns a PublicUser
-function getPublicUser(user) {
+function makePublic(user) {
   // Implementation (optional)
 }
 

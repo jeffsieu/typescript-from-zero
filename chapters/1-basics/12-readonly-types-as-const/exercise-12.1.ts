@@ -1,4 +1,4 @@
-// Exercise: Readonly types and "as const"
+// Exercise 12.1: Readonly types and "as const"
 
 // 1. Create a readonly version of the following interface
 type User = {
@@ -29,7 +29,7 @@ function doubleNumbers(numbers) {
   return numbers.map(n => n * 2);
 }
 
-// 6. Create an object with nested properties and use "as const"
+// 6. Modify the following object to make it a readonly object using "as const"
 const config = {
   api: {
     url: "https://api.example.com",

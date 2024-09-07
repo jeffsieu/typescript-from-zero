@@ -24,10 +24,11 @@ function calculateArea(width: number, height: number): number {
 }
 
 // 3. Use typeof to create a type based on the calculateArea function
-type AreaCalculator = typeof calculateArea;
+type AreaCalculator = ;// Your implementation here
 
 // 4. Create a new function that matches the AreaCalculator type
 const calculateRectangleArea: AreaCalculator = (w, h) => {
+  // Notice that the type of w and h are inferred as number
   // Implementation
 };
 
