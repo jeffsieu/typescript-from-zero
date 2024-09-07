@@ -1,4 +1,4 @@
-// Exercise 5.1: Annotate with literal types
+// Exercise 6.1: Annotate with literal types
 
 // Alignment is either "start", "center", or "end"
 function align(alignment: any) {

@@ -32,7 +32,7 @@ const user = {
 
 ## Benefit of using `satisfies`
 
-The benefit of using `satisfies` is that it does not override the inferred type of the variable; it only ensures that the variable can be assigned to the type.
+The benefit of using `satisfies` is that it does not override the inferred type of the variable; it only ensures that the variable can be assigned to the type. This means that we can retain strict type information, while ensuring the variable conforms to a looser type.
 
 This is illustrated in the following example:
 
@@ -54,4 +54,3 @@ const themeOptionsWithAnnotations: Option[] = [
   },
 ];
 type ThemeWithAnnotation = typeof themeOptionsWithAnnotations[number];
-//

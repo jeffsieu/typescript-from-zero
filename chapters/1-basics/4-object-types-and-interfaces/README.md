@@ -69,3 +69,33 @@ type User = {
 The two are mostly equivalent and essentially interchangable. You may use the syntax that you prefer.
 
 > Note: There is a small difference between the two, which we will cover in an advanced topic. Only interfaces can be used for declaration merging and module augmentation. Until then, you may ignore this.
+
+## Extending types/interfaces
+
+You can extend interfaces by using the `extends` keyword:
+
+```ts
+type User {
+  name: string;
+  age: number;
+}
+
+interface UserWithRole extends User {
+  role: string;
+}
+// ^ UserWithRole: { name: string, age: number, role: string }
+```
+
+You can also extend types using `&`:
+
+```ts
+type User = {
+  name: string;
+  age: number;
+}
+
+type UserWithRole = User & {
+  role: string;
+}
+// ^ UserWithRole: { name: string, age: number, role: string }
+```
