@@ -45,14 +45,14 @@ We will be using [Visual Studio Code](https://code.visualstudio.com/) with the f
   1. [Readonly types as const](./chapters/1-basics/12-readonly-types-as-const/README.md)
 
 - Intermediate
-  1. [Unknown vs any](./chapters/2-intermediate/1-unknown-vs-any/README.md)
-  1. [Intersection types](./chapters/2-intermediate/2-intersection-types/README.md)
-  1. [Exclude types, Omit, Exclude](./chapters/2-intermediate/3-exclude-types-omit-exclude/README.md)
-  1. [Variable types and typeof](./chapters/2-intermediate/4-variable-types-typeof/README.md)
-  1. [Variable keys and keyof](./chapters/2-intermediate/5-variable-keys-keyof/README.md)
-  1. [As vs type annotations vs satisfies](./chapters/2-intermediate/6-as-vs-type-annotations-vs-satisfies/README.md)
-  1. [Null, undefined, void, never](./chapters/2-intermediate/7-null-undefined-void-never/README.md)
-  1. [Discriminated unions](./chapters/2-intermediate/9-discriminated-unions/README.md)
+  1. [Unknown vs any](./chapters/2-intermediate-concepts/1-unknown-any/README.md)
+  1. [Intersection types](./chapters/2-intermediate-concepts/2-intersection-types/README.md)
+  1. [Exclude types, Omit, Exclude](./chapters/2-intermediate-concepts/3-exclude-types-omit-exclude/README.md)
+  1. [Variable types and typeof](./chapters/2-intermediate-concepts/4-variable-types-typeof/README.md)
+  1. [Variable keys and keyof](./chapters/2-intermediate-concepts/5-variable-keys-keyof/README.md)
+  1. [As vs type annotations vs satisfies](./chapters/2-intermediate-concepts/6-as-vs-type-annotations-vs-satisfies/README.md)
+  1. [Null, undefined, void, never](./chapters/2-intermediate-concepts/7-null-undefined-void-never/README.md)
+  1. [Discriminated unions](./chapters/2-intermediate-concepts/9-discriminated-unions/README.md)
 
 - Advanced concepts
   1. [Index types](./chapters/3-advanced-concepts/1-index-types/README.md)
