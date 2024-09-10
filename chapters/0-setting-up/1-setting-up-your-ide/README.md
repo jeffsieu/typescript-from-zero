@@ -12,5 +12,4 @@ We will be using [Visual Studio Code](https://code.visualstudio.com/) with the f
 
 ``` sh
 npm install
-
 ```
