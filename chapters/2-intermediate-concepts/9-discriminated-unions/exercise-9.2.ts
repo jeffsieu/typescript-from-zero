@@ -29,7 +29,6 @@ const tasks: Task[] = [
 ];
 
 tasks.forEach(task => console.log(summarizeTask(task)));
-console.log(`Estimated completion time: ${estimateCompletion(tasks)} hours`);
 
 // ignore the line below
 export {};

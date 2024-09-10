@@ -21,9 +21,9 @@ function getUserPermissions(user: User): string {
 }
 
 // Test your implementation
-const viewer: User = { role: "Viewer", id: 1, username: "john_doe" };
-const editor: User = { role: "Editor", id: 2, username: "jane_smith", department: "Marketing" };
-const admin: User = { role: "Admin", id: 3, username: "admin_user", accessLevel: 2 };
+const viewer: User = { role: "viewer", id: 1, username: "john_doe" };
+const editor: User = { role: "editor", id: 2, username: "jane_smith", department: "Marketing" };
+const admin: User = { role: "admin", id: 3, username: "admin_user", accessLevel: 2 };
 
 console.log(getUserPermissions(viewer));
 console.log(getUserPermissions(editor));

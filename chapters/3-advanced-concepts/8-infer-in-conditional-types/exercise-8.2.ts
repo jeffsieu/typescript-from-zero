@@ -34,6 +34,7 @@ type ReturnTypesTest = ReturnTypes<{
 }>;
 const returnTypesTest: ReturnTypesTest = {
   getValue: "",
+  getStatus: "active",
 };
 
 // ignore the line below

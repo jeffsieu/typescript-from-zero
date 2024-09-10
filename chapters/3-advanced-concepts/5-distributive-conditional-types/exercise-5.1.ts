@@ -41,7 +41,7 @@ const nonNullableTest: NonNullableTest = "hello";
 // This should cause a type error:
 // const nonNullableTestError: NonNullableTest = null;
 
-const image: ImageType = { type: 'image', url: 'https://example.com/image.jpg' };
+const image: Image = { type: 'image', url: 'https://example.com/image.jpg' };
 // This should cause a type error:
 // const extractTypeByKeyTestError: ExtractTypeByKeyTest = { type: 'text', content: 'Hello' };
 

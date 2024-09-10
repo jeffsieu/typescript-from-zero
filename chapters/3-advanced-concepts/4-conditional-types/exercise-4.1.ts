@@ -18,3 +18,6 @@ function isString(value) {
 // Test cases
 const test1 = isString('hello'); // Should be true, not boolean
 const test2 = isString(123); // Should be false, not boolean
+
+// Ignore the line below
+export {};

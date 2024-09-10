@@ -19,4 +19,5 @@ async function fetchOrderData() {
 // - Products: [{ id: 1, name: "Laptop" }]
 // - Orders: [{ orderId: 123, total: 99.99 }]
 
+// Ignore the line below
 export {};
