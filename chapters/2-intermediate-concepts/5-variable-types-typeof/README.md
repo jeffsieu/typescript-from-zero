@@ -5,7 +5,7 @@ You can extract the type of a variable using `typeof`.
 ```ts
 const x = 10;
 
-type X = typeof x; // number
+type X = typeof x; // 10 
 ```
 
 It isn't very useful on its own, but it can be combined with other operators to express more patterns.
