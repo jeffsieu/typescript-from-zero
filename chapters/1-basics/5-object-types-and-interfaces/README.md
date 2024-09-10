@@ -1,9 +1,9 @@
 # Object types (and interfaces)
 
-Often in Javascript, you have something like this:
+Often in JavaScript, you have something like this:
 
 ```js
-// Javascript
+// JavaScript
 const person = {
   name: 'Alice',
   age: 25,
@@ -11,10 +11,10 @@ const person = {
 };
 ```
 
-This is how we can type it in Typescript:
+This is how we can type it in TypeScript:
 
 ```ts
-// Typescript
+// TypeScript
 
 // Person is an object type
 type Person = {
@@ -30,7 +30,7 @@ const person: Person = {
 };
 ```
 
-The syntax for object types is similar to Javascript object literals, except that each key maps to a type instead of a value.
+The syntax for object types is similar to JavaScript object literals, except that each key maps to a type instead of a value.
 
 Notice the similarity between the two:
 

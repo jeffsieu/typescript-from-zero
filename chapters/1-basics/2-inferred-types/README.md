@@ -2,7 +2,7 @@
 
 > Reference: https://www.typescriptlang.org/docs/handbook/type-inference.html
 
-Take a look at the following piece of Typescript code:
+Take a look at the following piece of TypeScript code:
 
 ```ts
 

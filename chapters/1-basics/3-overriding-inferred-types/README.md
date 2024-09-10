@@ -35,7 +35,7 @@ Consider the following example, where the type of `useState` is wrongly inferred
 ```ts
 const [name, setName] = useState(null);
 
-// Typescript only allows us to set `name` to `null`
+// TypeScript only allows us to set `name` to `null`
 setName("Alice"); // Error: Argument of type 'string' is not assignable to parameter of type 'SetStateAction<null>'
 
 ```

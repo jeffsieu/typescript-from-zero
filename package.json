@@ -1,7 +1,7 @@
 {
   "name": "typescript-from-zero",
   "version": "1.0.0",
-  "description": "An interactive Typescript tutorial.",
+  "description": "An interactive TypeScript tutorial.",
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,6 +1,6 @@
 # Classes
 
-Classes are a way to implement object-oriented programming in Javascript. They are automatically a type in TypeScript.
+Classes are a way to implement object-oriented programming in JavaScript. They are automatically a type in TypeScript.
 
 ```ts
 class User {

@@ -121,4 +121,4 @@ function getAction(direction: 'left' | 'right' | 'up' | 'down'): Action {
 
 - Union types allow you to combine multiple types into one
 - Literal types allow you to specify the exact value that a variable can have
-- Literal unions allow you to create an enum-like data type in Typescript
+- Literal unions allow you to create an enum-like data type in TypeScript

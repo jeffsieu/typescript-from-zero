@@ -1,8 +1,8 @@
 # null, undefined, void and never
 
-If you have been using Javascript for a while, you would probably know that there are two special values that mean "nothing" in Javascript: `null` and `undefined`.
+If you have been using JavaScript for a while, you would probably know that there are two special values that mean "nothing" in JavaScript: `null` and `undefined`.
 
-Welcome to the world of Typescript, where there are more values that mean "nothing"!
+Welcome to the world of TypeScript, where there are more values that mean "nothing"!
 
 Introducing:
 
@@ -16,7 +16,7 @@ Introducing:
 
 ## Null vs undefined
 
-Firstly, `null` and `undefined` have their own corresponding and separate types in Typescript.
+Firstly, `null` and `undefined` have their own corresponding and separate types in TypeScript.
 
 > Note: This only applies in strict mode. If you are not using strict mode, `null` and `undefined` are assignable to any type.
 
@@ -45,7 +45,7 @@ This question is a common one, and the generally accepted answer is that `null` 
 This is illustrated in the following example:
 
 ```js
-// Javascript
+// JavaScript
 const user = {
   firstName: 'Alice',
   middleName: null,
@@ -80,7 +80,7 @@ function logMessage(message: string) {
 
 ### void is TypeScript-only
 
-Note: void does not exist in Javascript as a value at all. It only exists as a type value in TypeScript as a way to represent the return value of a function that does not return anything.
+Note: void does not exist in JavaScript as a value at all. It only exists as a type value in TypeScript as a way to represent the return value of a function that does not return anything.
 
 ```ts
 function logMessage(message: string) {

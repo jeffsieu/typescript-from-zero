@@ -1,23 +1,23 @@
-# Typescript from Zero
+# TypeScript from Zero
 
-This repository serves as an interactive guide to Typescript.
+This repository serves as an interactive guide to TypeScript.
 It contains written guides in the form of README.md files, as well as code examples in the form of `.ts` files.
 
 ## Prerequisites
 
 This course assumes that you have:
 
-- Proficiency with Javascript (or minimally any other language)
+- Proficiency with JavaScript (or minimally any other language)
 
 Good to have:
 
-- Some experience with Typescript
+- Some experience with TypeScript
 - VS Code installed
 
 ## Setup
 
 ```sh
-npm install # Install ESLint and Typescript for type-checking in hands-on exercises.
+npm install # Install ESLint and TypeScript for type-checking in hands-on exercises.
 ```
 
 We will be using [Visual Studio Code](https://code.visualstudio.com/) with the following extensions:
@@ -30,7 +30,7 @@ We will be using [Visual Studio Code](https://code.visualstudio.com/) with the f
 ## Table of Contents
 
 - Basics
-  1. [Introduction to Typescript](./chapters/1-basics/0-introduction-to-typescript/README.md)
+  1. [Introduction to TypeScript](./chapters/1-basics/0-introduction-to-typescript/README.md)
   1. [Type annotations](./chapters/1-basics/1-type-annotations/README.md)
   1. [Inferred types](./chapters/1-basics/2-inferred-types/README.md)
   1. [Overriding inferred types](./chapters/1-basics/3-overriding-inferred-types/README.md)
@@ -70,22 +70,22 @@ We will be using [Visual Studio Code](https://code.visualstudio.com/) with the f
 
 ### What this course is
 
-- A guide to Typescript syntax and best practices when using Typescript in your codebase
+- A guide to TypeScript syntax and best practices when using TypeScript in your codebase
 
 ### What this course is not
 
-- A guide to setting up Typescript in your project
-- A Javascript tutorial
+- A guide to setting up TypeScript in your project
+- A JavaScript tutorial
 
 ## Credits
 
 This set of course materials was prepared by [Jeff Sieu](https://jeffsieu.com). 
 
-Some of the examples and explanations were inspired by the [official Typescript documentation](https://www.typescriptlang.org/docs/).
+Some of the examples and explanations were inspired by the [official TypeScript documentation](https://www.typescriptlang.org/docs/).
 
 ## Useful resources
 
-- [Typescript for JavaScript programmers](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
-- [Typescript playground](https://www.typescriptlang.org/play)
+- [TypeScript for JavaScript programmers](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
+- [TypeScript playground](https://www.typescriptlang.org/play)
 - [Type Challenges (Interactive website)](https://type-challenges.github.io/)
 - [Type Challenges (Github)](https://github.com/type-challenges/type-challenges)

@@ -20,10 +20,10 @@ function printName(name: Name) {
 
 ## Type aliases vs variable declarations
 
-Type aliases are similar to Javascript variable declarations in many ways:
+Type aliases are similar to JavaScript variable declarations in many ways:
 
 - They are used to store values for later use
   - Type aliases store types for later use
-  - Javascript variables store values for later use
+  - JavaScript variables store values for later use
 
 You can think of type aliases as "variables for types".

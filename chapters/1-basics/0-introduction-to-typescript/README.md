@@ -1,7 +1,7 @@
-# Introduction to Typescript
+# Introduction to TypeScript
 
-- Typescript is a typed superset of Javascript.
-- It adds additional syntax to Javascript to support types.
+- TypeScript is a typed superset of JavaScript.
+- It adds additional syntax to JavaScript to support types.
 
 ## Benefits
 

@@ -4,14 +4,14 @@ In TypeScript, you can specify the type of a variable, function, or class by add
 
 This helps you catch bugs in your code before you run it, and makes your code more readable and maintainable.
 
-To appreciate the benefits of having types, let's first look at a problem with Javascript.
+To appreciate the benefits of having types, let's first look at a problem with JavaScript.
 
-## The problem with Javascript
+## The problem with JavaScript
 
-Here, we have a Javascript function `add`, which takes in `a` and `b` as parameters, and returns the sum of `a` and `b`. Pretty straightforward.
+Here, we have a JavaScript function `add`, which takes in `a` and `b` as parameters, and returns the sum of `a` and `b`. Pretty straightforward.
 
 ```ts
-// add.js (Javascript)
+// add.js (JavaScript)
 function add(a, b) {
   return a + b;
 }
@@ -23,7 +23,7 @@ We know that `a` and `b` should be numbers because we are adding them together. 
 In fact, we can pass in any value to `add` and it will still run.
 
 ```js
-// add.js (Javascript)
+// add.js (JavaScript)
 function add(a, b) {
   return a + b;
 }
@@ -68,12 +68,12 @@ function add(a: number, b: number): number {
 }
 ```
 
-In Typescript, type annotations are done by adding the type after the variable name, separated by a colon `:`. In this case, we are specifying that `a` and `b` are of type `number`.
+In TypeScript, type annotations are done by adding the type after the variable name, separated by a colon `:`. In this case, we are specifying that `a` and `b` are of type `number`.
 
 Here are more examples of type annotations:
 
 ```ts
-// ORIGINAL: index.js (Javascript)
+// ORIGINAL: index.js (JavaScript)
 const isActive = true
 const message = "Hello, World!"
 const age = 25
@@ -83,7 +83,7 @@ function greet(name) {
 }
 
 ///////////////////////////////////////////
-// ANNOTATED: index.ts (Typescript)
+// ANNOTATED: index.ts (TypeScript)
 const isActive: boolean = true
 const message: string = "Hello, World!"
 const age: number = 25
