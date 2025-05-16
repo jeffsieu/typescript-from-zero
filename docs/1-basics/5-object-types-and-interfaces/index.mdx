@@ -1,3 +1,7 @@
+---
+sidebar_label: 1.5. Object types (and interfaces)
+---
+
 # Object types (and interfaces)
 
 Often in JavaScript, you have something like this:
@@ -99,3 +103,12 @@ type UserWithRole = User & {
 }
 // ^ UserWithRole: { name: string, age: number, role: string }
 ```
+
+## Exercise 5.1
+
+import Exercise5_1 from '!!raw-loader!./exercise-5.1.ts';
+import Exercise5_1_Solution from '!!raw-loader!./exercise-5.1.solution.ts';
+
+Define object types and interfaces to make the code more structured and readable.
+
+<CodeEditor codeKey="exercise1.5.1" defaultValue={Exercise5_1} solution={Exercise5_1_Solution} />

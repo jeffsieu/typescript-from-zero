@@ -1,3 +1,7 @@
+---
+sidebar_label: 3.1. Index types
+---
+
 # Index types
 
 Index types in TypeScript allow you to query the type of properties within an object or record. This is useful when working with dynamically created keys or when you want to create types that depend on other types.
@@ -59,3 +63,12 @@ In this example, the `getPersonInfo` function accepts only `'name'` or `'email'`
 ## Enforcing Key Consistency
 
 Index types are particularly useful for enforcing consistency when working with complex objects. For instance, if you want to make sure the keys of one object are a subset of another, or if you want to dynamically create types based on other types, index types are invaluable.
+
+## Exercise 1.1
+
+import Exercise1_1 from '!!raw-loader!./exercise-1.1.ts';
+import Exercise1_1_Solution from '!!raw-loader!./exercise-1.1.solution.ts';
+
+Use `keyof` to extract the type of a property from an object type.
+
+<CodeEditor codeKey="exercise3.1.1" defaultValue={Exercise1_1} solution={Exercise1_1_Solution} />

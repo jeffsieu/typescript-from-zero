@@ -1,3 +1,7 @@
+---
+sidebar_label: 2.3. Exclude types using `Omit` and `Exclude`
+---
+
 # Exclude types using `Omit` and `Exclude`
 
 You can exclude types from existing types using `Omit` and `Exclude`.
@@ -38,3 +42,12 @@ type SidewaysDirection = Exclude<Direction, "top" | "bottom">;
 ```
 
 `Exclude` is helpful when working with union types and you want to remove certain types from the union.
+
+## Exercise 3.1
+
+import Exercise3_1 from '!!raw-loader!./exercise-3.1.ts';
+import Exercise3_1_Solution from '!!raw-loader!./exercise-3.1.solution.ts';
+
+Practice using `Omit` and `Exclude` to create new types by excluding specific properties or union members.
+
+<CodeEditor codeKey="exercise2.3.1" defaultValue={Exercise3_1} solution={Exercise3_1_Solution} />

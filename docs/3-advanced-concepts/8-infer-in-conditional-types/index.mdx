@@ -1,3 +1,7 @@
+---
+sidebar_label: 3.8. `infer` in conditional types
+---
+
 # `infer` in conditional types
 
 The `infer` keyword is used within conditional types to infer (extract) type information. It allows you to capture and use types that are matched within a conditional type.
@@ -57,3 +61,21 @@ type FL = FirstAndLast<[1, 2, 3, 4]>; // [1, 4]
 ```
 
 The `infer` keyword, combined with conditional types, provides a powerful way to perform type-level programming in TypeScript, enabling complex type transformations and pattern matching on types.
+
+## Exercise 8.1
+
+import Exercise8_1 from '!!raw-loader!./exercise-8.1.ts';
+import Exercise8_1_Solution from '!!raw-loader!./exercise-8.1.solution.ts';
+
+Use `infer` with conditional types to implement utility types.
+
+<CodeEditor codeKey="exercise3.8.1" defaultValue={Exercise8_1} solution={Exercise8_1_Solution} />
+
+## Exercise 8.2
+
+import Exercise8_2 from '!!raw-loader!./exercise-8.2.ts';
+import Exercise8_2_Solution from '!!raw-loader!./exercise-8.2.solution.ts';
+
+Use `infer` with conditional types to implement advanced type utilities.
+
+<CodeEditor codeKey="exercise3.8.2" defaultValue={Exercise8_2} solution={Exercise8_2_Solution} />

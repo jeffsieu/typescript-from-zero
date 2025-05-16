@@ -1,3 +1,7 @@
+---
+sidebar_label: 2.2. Intersection types
+---
+
 # Intersection types
 
 In TypeScript, you can combine types using intersection types.
@@ -87,4 +91,11 @@ This works because `AdminUser` has to satisfy both `User` and `{ isAdmin: true }
 
 > P.S. Trying intersecting types which are not compatible
 
-.
+## Exercise 2.1
+
+import Exercise2_1 from '!!raw-loader!./exercise-2.1.ts';
+import Exercise2_1_Solution from '!!raw-loader!./exercise-2.1.solution.ts';
+
+Explore how to use intersection types to combine multiple types into one and derive new types from existing ones.
+
+<CodeEditor codeKey="exercise2.2.1" defaultValue={Exercise2_1} solution={Exercise2_1_Solution} />

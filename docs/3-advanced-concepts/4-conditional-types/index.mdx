@@ -1,3 +1,7 @@
+---
+sidebar_label: 3.4. Conditional types
+---
+
 # Conditional types
 
 Conditional types are a powerful feature in TypeScript that allow you to make type decisions based on conditions. This can help you create more flexible and reusable types.
@@ -63,3 +67,12 @@ type ExcludeNullish<T> = T extends null | undefined ? never : T;
 
 type NonNullableString = ExcludeNullish<string | null | undefined>; // string
 ```
+
+## Exercise 4.1
+
+import Exercise4_1 from '!!raw-loader!./exercise-4.1.ts';
+import Exercise4_1_Solution from '!!raw-loader!./exercise-4.1.solution.ts';
+
+Create a conditional type `NonNullableType<T>` that removes `null` and `undefined` from a given type `T`. Test it with the type `string | null | undefined` to ensure it works as expected.
+
+<CodeEditor codeKey="exercise3.4.1" defaultValue={Exercise4_1} solution={Exercise4_1_Solution} />

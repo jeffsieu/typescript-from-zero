@@ -1,3 +1,7 @@
+---
+sidebar_label: 3.7. Mapped types
+---
+
 # Mapped types
 
 Mapped types allow you to create new types based on existing ones. They provide a way to transform the properties of an existing type in a systematic way, creating a new type with modified property types, names, or modifiers.
@@ -118,3 +122,21 @@ type Config = EventConfig<SquareEvent | CircleEvent>
 //     circle: (event: CircleEvent) => void;
 // }
 ```
+
+## Exercise 7.1
+
+import Exercise7_1 from '!!raw-loader!./exercise-7.1.ts';
+import Exercise7_1_Solution from '!!raw-loader!./exercise-7.1.solution.ts';
+
+Implement some utility types using mapped types.
+
+<CodeEditor codeKey="exercise3.7.1" defaultValue={Exercise7_1} solution={Exercise7_1_Solution} />
+
+## Exercise 7.2
+
+import Exercise7_2 from '!!raw-loader!./exercise-7.2.ts';
+import Exercise7_2_Solution from '!!raw-loader!./exercise-7.2.solution.ts';
+
+Implement a type-safe event system using mapped types.
+
+<CodeEditor codeKey="exercise3.7.2" defaultValue={Exercise7_2} solution={Exercise7_2_Solution} />

@@ -13,18 +13,18 @@ interface Events {
 // Example: { click: (event: { x: number; y: number }) => void, ... }
 
 type Handlers<T> = {
-  [K in keyof T]: (event: T[K]) => void
-}
-type EventHandlers = Handlers<Events>
+  [K in keyof T]: (event: T[K]) => void;
+};
+type EventHandlers = Handlers<Events>;
 
 // TODO: Create a mapped type 'EventEmitters' that transforms the Events interface
 // into a set of event emitter functions
 // Example: { emitClick: (event: { x: number; y: number }) => void, ... }
 
 type Emitters<T> = {
-  [K in keyof T as `emit${Capitalize<string & K>}`]: (event: T[K]) => void
-}
-type EventEmitters = Emitters<Events>
+  [K in keyof T as `emit${Capitalize<string & K>}`]: (event: T[K]) => void;
+};
+type EventEmitters = Emitters<Events>;
 
 // TODO: Implement a type-safe event emitter class using the mapped types above
 
@@ -46,7 +46,7 @@ class TypeSafeEventEmitter {
     emitClick: (event) => this.emit("click", event),
     emitFocus: (event) => this.emit("focus", event),
     emitInput: (event) => this.emit("input", event),
-  }
+  };
 }
 
 // Test your implementation

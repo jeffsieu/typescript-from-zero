@@ -1,11 +1,14 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 // EXERCISE 8.1: Infer in conditional types
 // Implement utility types using infer in conditional types
 
 // 1. Implement a 'MyParameters' type that extracts the parameter types of a function type as a tuple
 // Example: MyParameters<(a: number, b: string) => void> should be [number, string]
 
-type MyParameters<T extends (...args: any) => any> = T extends (...args: infer P) => any ? P : never;
+type MyParameters<T extends (...args: any) => any> = T extends (
+  ...args: infer P
+) => any
+  ? P
+  : never;
 type ParamsTest = MyParameters<(a: number, b: string, c: boolean) => void>;
 //   ^?
 const paramsTest: ParamsTest = [1, "hello", true];
@@ -25,7 +28,9 @@ const firstArgTest: FirstArgTest = "hello";
 // Example: LastInArray<[number, string, boolean]> should be boolean
 
 type LastInArray<T extends any[]> = T extends [...any[], infer L] ? L : never;
-type LastInArray2<T extends any[]> = T extends [...infer _, infer L] ? L : never;
+type LastInArray2<T extends any[]> = T extends [...infer _, infer L]
+  ? L
+  : never;
 type LastInArrayTest = LastInArray<[number, string, boolean]>;
 //   ^?
 //     Should be boolean

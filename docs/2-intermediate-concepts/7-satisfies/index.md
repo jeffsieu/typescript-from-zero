@@ -1,3 +1,7 @@
+---
+sidebar_label: 2.7. Using `satisfies` to check type conformation
+---
+
 # Using `satisfies` to check type conformation
 
 So far, whenever we wish to assert that a variable conforms to a certain type, we use type annotations.

@@ -1,3 +1,7 @@
+---
+sidebar_label: 1.8. Type assertions
+---
+
 # Type assertions
 
 There is another way to override inferred types: type assertions.

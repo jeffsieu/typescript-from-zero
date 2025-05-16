@@ -1,3 +1,7 @@
+---
+sidebar_label: 1.2. Inferred types
+---
+
 # Inferred types
 
 > Reference: https://www.typescriptlang.org/docs/handbook/type-inference.html
@@ -5,7 +9,6 @@
 Take a look at the following piece of TypeScript code:
 
 ```ts
-
 function getUserGreeting(name: string, age: number): string {
   const isUserOld: boolean = age > 60;
   const isNameCapitalized: boolean = name[0] === name[0].toUpperCase();
@@ -14,7 +17,6 @@ function getUserGreeting(name: string, age: number): string {
   // do more stuff
   // return greeting
 }
-
 ```
 
 In the above example, we have annotated the types of `isUserOld`, `isNameCapitalized`, and `isAgeEven` to be `boolean`. However, we can remove these type annotations and TypeScript will still be able to infer the types of these variables.
@@ -52,4 +54,9 @@ These cases will be covered in later chapters. For now, when it is clear what a 
 
 ## Exercise 2.1
 
+import Exercise2_1 from '!!raw-loader!./exercise-2.1.ts';
+import Exercise2_1_Solution from '!!raw-loader!./exercise-2.1.solution.ts';
+
 Make the code more concise by identifying and removing unnecessary type annotations.
+
+<CodeEditor codeKey="exercise1.2.1" defaultValue={Exercise2_1} solution={Exercise2_1_Solution} />

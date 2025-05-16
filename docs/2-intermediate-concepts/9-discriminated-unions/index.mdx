@@ -1,3 +1,7 @@
+---
+sidebar_label: 2.9. Discriminated unions
+---
+
 # Discriminated unions
 
 Discriminated unions, also known as tagged unions or algebraic data types, are a powerful feature in TypeScript that allows you to create types which are a union of other types, but can be easily differentiated based on a common, literal property.
@@ -72,3 +76,21 @@ Discriminated unions are particularly useful for:
 3. Representing different variants of a data structure
 
 They provide a way to model complex data structures whilst maintaining type safety and enabling powerful type inference.
+
+## Exercise 9.1
+
+import Exercise9_1 from '!!raw-loader!./exercise-9.1.ts';
+import Exercise9_1_Solution from '!!raw-loader!./exercise-9.1.solution.ts';
+
+Implement a discriminated union for different types of users in a system, and create functions to process these users.
+
+<CodeEditor codeKey="exercise2.9.1" defaultValue={Exercise9_1} solution={Exercise9_1_Solution} />
+
+## Exercise 9.2
+
+import Exercise9_2 from '!!raw-loader!./exercise-9.2.ts';
+import Exercise9_2_Solution from '!!raw-loader!./exercise-9.2.solution.ts';
+
+Model a task management system using discriminated unions, and implement functions to process tasks.
+
+<CodeEditor codeKey="exercise2.9.2" defaultValue={Exercise9_2} solution={Exercise9_2_Solution} />

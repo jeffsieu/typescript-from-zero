@@ -1,3 +1,7 @@
+---
+sidebar_label: 1.4. Type aliases
+---
+
 # Type aliases
 
 Sometimes, you have to reuse a type elsewhere in your code. Instead of repeating the type definition, you can use a type alias.

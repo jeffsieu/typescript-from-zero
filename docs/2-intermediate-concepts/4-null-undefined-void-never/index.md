@@ -1,3 +1,7 @@
+---
+sidebar_label: 2.4. Null, undefined, void and never
+---
+
 # null, undefined, void and never
 
 If you have been using JavaScript for a while, you would probably know that there are two special values that mean "nothing" in JavaScript: `null` and `undefined`.

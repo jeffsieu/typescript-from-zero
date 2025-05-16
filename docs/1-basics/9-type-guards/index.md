@@ -1,3 +1,7 @@
+---
+sidebar_label: 1.9. Type guards
+---
+
 # Type guards
 
 Type guards are special functions in TypeScript that help you narrow down the type of a variable within a block of code. They are one of the best ways to type check your code without using type assertions.
@@ -113,3 +117,12 @@ function processData(data: unknown) {
   }
 }
 ```
+
+import Exercise9_1 from '!!raw-loader!./exercise-9.1.ts';
+import Exercise9_1_Solution from '!!raw-loader!./exercise-9.1.solution.ts';
+
+## Exercise 9.1
+
+Implement type guards to narrow down types and ensure type safety.
+
+<CodeEditor codeKey="exercise1.9.1" defaultValue={Exercise9_1} solution={Exercise9_1_Solution} />

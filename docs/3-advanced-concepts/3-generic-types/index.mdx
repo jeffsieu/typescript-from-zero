@@ -1,3 +1,7 @@
+---
+sidebar_label: 3.3. Generic types
+---
+
 # Generic types
 
 Generics in TypeScript allow you to create reusable, flexible, and type-safe components. Instead of creating multiple versions of a function or class to handle different types, you can use generics to create a single version that works with various types, while still ensuring type safety.
@@ -82,3 +86,12 @@ This ensures that only objects with a `length` property are passed in, avoiding 
 ## Summary
 
 Generics provide a way to write reusable, flexible, and type-safe code. They are especially useful in situations where you need to handle multiple types but want to maintain strict type safety. Generics can be applied to functions, arrays, classes, and more, making your TypeScript code more robust and maintainable.
+
+## Exercise 3.1
+
+import Exercise3_1 from '!!raw-loader!./exercise-3.1.ts';
+import Exercise3_1_Solution from '!!raw-loader!./exercise-3.1.solution.ts';
+
+Write a generic function `filterByProperty` that takes an array of objects and a property name, and returns an array of values for that property. Ensure the function is type-safe and works for any object type.
+
+<CodeEditor codeKey="exercise3.3.1" defaultValue={Exercise3_1} solution={Exercise3_1_Solution} />

@@ -1,3 +1,7 @@
+---
+sidebar_label: 1.6. Optional properties and parameters
+---
+
 # Optional properties and parameters
 
 In TypeScript, optional types and parameters allow you to define values that may or may not be present. This is useful when you want to create flexible interfaces or functions that can work with varying amounts of information.
@@ -61,3 +65,12 @@ function getUsername(user: { name: string; username?: string }) {
 ```
 
 This returns `user.username` if it exists, otherwise it falls back to `user.name`.
+
+## Exercise 6.1
+
+import Exercise6_1 from '!!raw-loader!./exercise-6.1.ts';
+import Exercise6_1_Solution from '!!raw-loader!./exercise-6.1.solution.ts';
+
+Add type annotations where necessary and modify the functions to handle optional parameters appropriately.
+
+<CodeEditor codeKey="exercise1.6.1" defaultValue={Exercise6_1} solution={Exercise6_1_Solution} />

@@ -1,5 +1,5 @@
 {
-  "label": "Advanced Concepts",
+  "label": "3. Advanced Concepts",
   "customProps": {
     "description": "Dive into advanced TypeScript topics such as index types, mapped types, and advanced type manipulation."
   }

@@ -1,5 +1,5 @@
 {
-  "label": "Intermediate Concepts",
+  "label": "2. Intermediate Concepts",
   "customProps": {
     "description": "Explore intermediate TypeScript concepts like discriminated unions, intersection types, and more."
   }

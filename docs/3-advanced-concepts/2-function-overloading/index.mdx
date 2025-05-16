@@ -1,3 +1,7 @@
+---
+sidebar_label: 3.2. Function overloading
+---
+
 # Function overloading
 
 Function overloading in TypeScript allows you to define multiple signatures for a function, enabling different input and output types for different use cases. This is useful when a function can behave differently based on the types of arguments passed to it.
@@ -36,3 +40,12 @@ Function overloading becomes useful when:
 
 - A function’s behaviour depends on the type of its parameters.
 - The return type is different based on the input type.
+
+## Exercise 2.1
+
+import Exercise2_1 from '!!raw-loader!./exercise-2.1.ts';
+import Exercise2_1_Solution from '!!raw-loader!./exercise-2.1.solution.ts';
+
+Create a function `describe` that takes either a `string` or a `number` as input. If the input is a `string`, it should return the length of the string. If the input is a `number`, it should return the square of the number. Use function overloading to achieve this.
+
+<CodeEditor codeKey="exercise3.2.1" defaultValue={Exercise2_1} solution={Exercise2_1_Solution} />

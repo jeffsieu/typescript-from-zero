@@ -1,3 +1,7 @@
+---
+sidebar_label: 1.11. Classes
+---
+
 # Classes
 
 Classes are a way to implement object-oriented programming in JavaScript. They are automatically a type in TypeScript.

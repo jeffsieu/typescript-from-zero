@@ -1,3 +1,7 @@
+---
+sidebar_label: 1.7. Union and literal types
+---
+
 # Union and Literal Types
 
 TypeScript provides powerful type system features that allow for more precise type definitions. Two such features are union types and literal types.
@@ -122,3 +126,12 @@ function getAction(direction: 'left' | 'right' | 'up' | 'down'): Action {
 - Union types allow you to combine multiple types into one
 - Literal types allow you to specify the exact value that a variable can have
 - Literal unions allow you to create an enum-like data type in TypeScript
+
+## Exercise 7.1
+
+import Exercise7_1 from '!!raw-loader!./exercise-7.1.ts';
+import Exercise7_1_Solution from '!!raw-loader!./exercise-7.1.solution.ts';
+
+Use union and literal types to make the code more robust and type-safe.
+
+<CodeEditor codeKey="exercise1.7.1" defaultValue={Exercise7_1} solution={Exercise7_1_Solution} />

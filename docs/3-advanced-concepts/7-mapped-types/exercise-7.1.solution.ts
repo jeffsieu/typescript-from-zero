@@ -1,42 +1,46 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 // EXERCISE 7.1: Mapped types
 // Implement utility types using mapped types
 
 // TODO: Implement a 'ReadonlyDeep' type that makes all properties and nested properties of T readonly
 
 type ReadonlyDeep<T> = {
-  readonly [K in keyof T]: ReadonlyDeep<T[K]>
-}
+  readonly [K in keyof T]: ReadonlyDeep<T[K]>;
+};
 
-type A = ReadonlyDeep<{a: {b: {c: string}}}>
+type A = ReadonlyDeep<{ a: { b: { c: string } } }>;
 //   ^?
 
 const a: A = {
   a: {
     b: {
-      c: ''
-    }
-  }
-}
+      c: "",
+    },
+  },
+};
 // a.a.b.c = ""; // This should cause a type error
-
 
 // TODO: Implement a 'PickByType' type that constructs a type by picking all properties
 // from T that are assignable to U
 type PickByType<T, U> = {
-  [K in keyof T as (T[K] extends U ? K : T[K] extends Record<string, unknown> ? K : never)]: PickByType<T[K], U>
-}
+  [K in keyof T as T[K] extends U
+    ? K
+    : T[K] extends Record<string, unknown>
+    ? K
+    : never]: PickByType<T[K], U>;
+};
 
-type Picked = PickByType<{a: number, b: string, c: {d: string, e: number}, d: number}, string>
+type Picked = PickByType<
+  { a: number; b: string; c: { d: string; e: number }; d: number },
+  string
+>;
 //   ^?
 
-
 const picked: Picked = {
-  b: '',
+  b: "",
   c: {
-    d: '',
-  }
-}
+    d: "",
+  },
+};
 
 // TODO: Implement a 'FunctionPropertyNames' type that extracts the names of all function properties from T
 
@@ -44,12 +48,19 @@ type IsFunction<T> = T extends (...args: any[]) => any ? true : false;
 
 // should output "g" | "h"
 type FunctionPropertyNames<T> = {
-  [K in keyof T]: (IsFunction<T[K]> extends true ? K : never) | (T[K] extends Record<string, unknown> ? FunctionPropertyNames<T[K]> : never)
-}[keyof T]
+  [K in keyof T]:
+    | (IsFunction<T[K]> extends true ? K : never)
+    | (T[K] extends Record<string, unknown>
+        ? FunctionPropertyNames<T[K]>
+        : never);
+}[keyof T];
 
-type FTest = FunctionPropertyNames<{a: string, f: () => void, b: { g: () => void}}>
+type FTest = FunctionPropertyNames<{
+  a: string;
+  f: () => void;
+  b: { g: () => void };
+}>;
 //   ^?
-
 
 // Test your implementations
 interface TestObject {
@@ -80,10 +91,10 @@ const readonlyObject: DeepReadonlyTest = {
   c: true,
   d: {
     e: 2,
-    f: "nested"
+    f: "nested",
   },
   g: () => {},
-  h: (x) => x.toString()
+  h: (x) => x.toString(),
 };
 
 // This should cause type errors:
@@ -95,20 +106,20 @@ const pickedByType: PickByTypeTest = {
   d: {
     e: 2,
     // f: "this should cause an error"
-  }
+  },
 };
 
 const functionNames: FunctionNamesTest = "g" as const;
 
 // ADDITIONAL CONTENT FROM LESSON BELOW
 type ExtractGetters<T> = {
-  [K in keyof T & `get${string}`]: T[K]
-}
+  [K in keyof T & `get${string}`]: T[K];
+};
 
 type User = {
   id: string;
   getId: () => string;
-}
+};
 
 type UserGetters = ExtractGetters<User>;
 //   ^?

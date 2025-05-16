@@ -1,3 +1,7 @@
+---
+sidebar_label: 3.6. Template literal types
+---
+
 # Template literal types
 
 Template literal types in TypeScript allow you to create new string types by combining literal types with embedded expressions, similar to how string templates work in JavaScript. This is a powerful way to build dynamic types that depend on other types, making type definitions more flexible and descriptive.
@@ -60,3 +64,12 @@ const message: WelcomeMessage = "Welcome, admin!"; // Valid
 ```
 
 In this case, `WelcomeMessage` can be one of `"Welcome, admin!"`, `"Welcome, user!"`, or `"Welcome, guest!"`, making the type both dynamic and constrained.
+
+## Exercise 6.1
+
+import Exercise6_1 from '!!raw-loader!./exercise-6.1.ts';
+import Exercise6_1_Solution from '!!raw-loader!./exercise-6.1.solution.ts';
+
+Use template literal types to create a type that represents valid URLs.
+
+<CodeEditor codeKey="exercise3.6.1" defaultValue={Exercise6_1} solution={Exercise6_1_Solution} />

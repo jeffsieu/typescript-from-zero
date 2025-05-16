@@ -1,0 +1,13 @@
+.editorActions {
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .editorActions {
+    flex-direction: column;
+  }
+}

@@ -1,3 +1,7 @@
+---
+sidebar_label: 1.12. Readonly types and `as const`
+---
+
 # Readonly types and `as const`
 
 In TypeScript, you can use `as const` to declare that an object is immutable.

@@ -1,3 +1,7 @@
+---
+sidebar_label: 2.6. Variable keys using `keyof`
+---
+
 # Variable keys using `keyof`
 
 We can get the keys of a type using `keyof`. This is useful for getting valid keys of objects and arrays.
@@ -48,3 +52,12 @@ const routeHandlers = {
 type RouteUrl = keyof typeof routeHandlers;
 // RouteUrl: "/api/users" | "/api/users/:id"
 ```
+
+## Exercise 6.1
+
+import Exercise6_1 from '!!raw-loader!./exercise-6.1.ts';
+import Exercise6_1_Solution from '!!raw-loader!./exercise-6.1.solution.ts';
+
+Use `keyof` to create types representing keys of objects, annotate functions with appropriate types, and create a function to retrieve API URLs based on keys.
+
+<CodeEditor codeKey="exercise2.6.1" defaultValue={Exercise6_1} solution={Exercise6_1_Solution} />

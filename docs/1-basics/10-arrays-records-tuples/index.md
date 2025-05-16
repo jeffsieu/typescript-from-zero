@@ -1,3 +1,7 @@
+---
+sidebar_label: 1.10. Arrays, records, and tuples
+---
+
 # Arrays, records and tuples
 
 ## Arrays

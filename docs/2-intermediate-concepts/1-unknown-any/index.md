@@ -1,3 +1,7 @@
+---
+sidebar_label: 2.1. unknown and any
+---
+
 # unknown and any
 
 In TypeScript, there are two special types: `unknown` and `any`.
