@@ -1,0 +1,6 @@
+{
+  "label": "Basics",
+  "customProps": {
+    "description": "Learn the fundamentals of TypeScript, including type annotations, type assertions, and more."
+  }
+}
