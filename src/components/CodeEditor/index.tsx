@@ -5,24 +5,8 @@ import { useEffect, useState, useRef } from "react";
 import clsx from "clsx";
 import TypeScriptSandboxEditor from "./TypeScriptSandboxEditor";
 import styles from "./styles.module.css";
-
-function useSavedCode(key: string, defaultValue: string) {
-  const [code, setCode] = useLocalStorage(key, defaultValue);
-
-  return {
-    code,
-    setCode,
-  };
-}
-
-function useShouldSaveCode() {
-  const [shouldAutosaveCode, setShouldAutosaveCode] = useLocalStorage(
-    "shouldAutosaveCode",
-    true
-  );
-
-  return [shouldAutosaveCode, setShouldAutosaveCode] as const;
-}
+import BrowserOnly from "@docusaurus/BrowserOnly";
+import CopyToClipboardButton from "./CopyToClipboardButton";
 
 type CodeEditorProps = {
   codeKey: string;
@@ -30,21 +14,23 @@ type CodeEditorProps = {
   solution: string;
 };
 
-export default function CodeEditor({
+function BrowserCodeEditor({
   codeKey,
   defaultValue,
   solution,
 }: CodeEditorProps) {
   const monaco = useMonaco();
+  const [shouldAutosaveCode, setShouldAutosaveCode] = useLocalStorage(
+    "shouldAutosaveCode",
+    true
+  );
+  const [code, setCode] = useLocalStorage(codeKey, defaultValue);
+
   const [shouldShowDiff, setShouldShowDiff] = useState(false);
-  const { code, setCode } = useSavedCode(codeKey, defaultValue);
   const [shouldShowSolution, setShouldShowSolution] = useState(false);
   const [value, setValue] = useState(code);
-  const [shouldAutosaveCode, setShouldAutosaveCode] = useShouldSaveCode();
-  const { colorMode } = useColorMode();
-  const [clipboardTick, setClipboardTick] = useState(false);
-  const clipboardTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
+  const { colorMode } = useColorMode();
   const theme = colorMode === "dark" ? "vs-dark" : "light";
 
   const handleCodeChange = (newValue: string | undefined) => {
@@ -54,26 +40,12 @@ export default function CodeEditor({
     setValue(newValue || "");
   };
 
-  const handleCopyToClipboard = () => {
-    navigator.clipboard.writeText(value);
-    setClipboardTick(true);
-
-    if (clipboardTimeoutRef.current) {
-      clearTimeout(clipboardTimeoutRef.current);
-    }
-
-    clipboardTimeoutRef.current = setTimeout(() => {
-      setClipboardTick(false);
-    }, 1000);
-  };
-
   useEffect(() => {
     if (shouldShowSolution) {
       return;
     }
 
     if (shouldAutosaveCode) {
-      console.log("Autosaving code...", value);
       setCode(value);
     }
   }, [value, shouldAutosaveCode, setCode, shouldShowSolution]);
@@ -82,9 +54,6 @@ export default function CodeEditor({
     if (!monaco) {
       return;
     }
-
-    // Show inlay hints
-    // monaco.languages.registerInlayHintsProvider("typescript", )
 
     monaco.languages.typescript.typescriptDefaults.setDiagnosticsOptions({
       noSemanticValidation: false,
@@ -123,12 +92,7 @@ export default function CodeEditor({
           >
             Reset
           </button>
-          <button
-            className="button button--secondary button--outline"
-            onClick={handleCopyToClipboard}
-          >
-            {clipboardTick ? "✔ Copied" : "Copy"}
-          </button>
+          <CopyToClipboardButton value={value} />
         </div>
         <div style={{ display: "flex", gap: "1rem" }}>
           {shouldShowSolution && (
@@ -204,4 +168,8 @@ export default function CodeEditor({
       )}
     </div>
   );
+}
+
+export default function CodeEditor(props: CodeEditorProps) {
+  return <BrowserOnly>{() => <BrowserCodeEditor {...props} />}</BrowserOnly>;
 }
