@@ -11,9 +11,14 @@ import styles from "./index.module.css";
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <header className={clsx("hero hero--primary", styles.heroBanner)}>
+    <header className={clsx("hero", styles.heroBanner)}>
+      <img
+        alt="TypeScript from Zero"
+        className={styles.heroBannerImage}
+        src="img/banner-uncropped.svg"
+      />
       <div className="container">
-        <Heading as="h1" className="hero__title">
+        <Heading as="h1" className={clsx("hero__title", styles.heroTitle)}>
           {siteConfig.title}
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
@@ -33,10 +38,7 @@ function HomepageHeader() {
 export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
-    >
+    <Layout title="Home" description={siteConfig.tagline}>
       <HomepageHeader />
       <main>
         <HomepageFeatures />

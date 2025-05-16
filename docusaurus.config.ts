@@ -49,7 +49,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: "img/docusaurus-social-card.jpg",
+    image: "img/social-card.png",
     navbar: {
       title: "TypeScript from Zero",
       logo: {
@@ -61,7 +61,7 @@ const config: Config = {
           type: "docSidebar",
           sidebarId: "tutorialSidebar",
           position: "left",
-          label: "Tutorial",
+          label: "Guide",
         },
         {
           href: "https://github.com/jeffsieu/typescript-from-zero",

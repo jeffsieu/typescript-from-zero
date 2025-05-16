@@ -1,5 +1,7 @@
 # TypeScript from Zero
 
+![TypeScript from Zero](./static/img/social-card.png)
+
 This repository serves as an interactive guide to TypeScript.
 It contains written guides in the form of README.md files, as well as code examples in the form of `.ts` files.
 
