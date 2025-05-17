@@ -1,6 +1,6 @@
 # TypeScript from Zero
 
-![TypeScript from Zero](./static/img/social-card.png)
+![TypeScript from Zero](./static/img/banner-uncropped.svg)
 
 This repository serves as an interactive guide to TypeScript.
 
