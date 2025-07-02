@@ -6,7 +6,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "TypeScript from Zero",
-  tagline: "Learn advanced TypeScript starting from solid foundations",
+  tagline: "Learn advanced TypeScript starting from solid foundations.",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -43,6 +43,9 @@ const config: Config = {
         blog: false,
         theme: {
           customCss: "./src/css/custom.css",
+        },
+        gtag: {
+          trackingID: "G-6WPELFYCC1",
         },
       } satisfies Preset.Options,
     ],
